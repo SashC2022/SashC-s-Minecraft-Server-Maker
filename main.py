@@ -43,7 +43,7 @@ if startupCore_c == 'y':
 	file_create = open("start.sh", "x")
 	#创建文件
 	f = open("start.sh", "w")
-	f.write("java -server -XX:+UseG1GC  -Xmx"+ xmx +" -Xms"+ xms +"-jar server.jar nogui")
+	f.write("java -server -XX:+UseG1GC  -Xmx"+ xmx +"  -Xms"+ xms +"-jar server.jar nogui")
 	f.close()
 	output = os.popen('./start.sh').readlines()
 	print(output)
